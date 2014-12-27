@@ -1,0 +1,23 @@
+OASISFormat: 0.4
+Name:        icalendar
+Version:     0.1
+Synopsis:    Reading / Writing of iCalendar data format as described in RFC 5545 (and data encoded in iCalendar / vCard parameter value encoding as described in RFC 6868).
+Authors:     James Lawrence Turner
+License:     MIT
+Plugins:     META (0.4)
+
+Library icalendar
+  Path:       src
+  BuildTools: ocamlbuild
+  Modules:    Icalendar
+  BuildDepends: str
+
+Executable rfc6868_test
+  Path:               test
+  BuildTools: 	      ocamlbuild
+  MainIs:             icalendar_test.ml
+  Custom:             true
+  CompiledObject:     best
+  Install:            false
+  BuildDepends:       ounit, qcheck, icalendar
+  

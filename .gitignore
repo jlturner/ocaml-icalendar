@@ -1,0 +1,11 @@
+.DS_Store
+*.native
+setup.data
+setup.log
+setup.ml
+myocamlbuild.ml
+_build
+_tags
+META
+*.mldylib
+*.mllib
